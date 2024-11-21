@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://pay.google.com/gp/p/js/pay.js" async></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mangify</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="art-item">
+            <div class="art-image">
+                <img src="assets/images/art1.jpg" alt="Digital Art 1" class="image-placeholder">
+            </div>
+            <h3>Art 1</h3>
+            <p>Price: ₹100</p>
+            <button class="buy-btn" onclick="redirectToUploadPage(100)">Buy Now</button>
+        </div>
+        <div class="art-item">
+            <div class="art-image">
+                <img src="assets/images/art2.jpg" alt="Digital Art 2" class="image-placeholder">
+            </div>
+            <h3>Art 2</h3>
+            <p>Price: ₹150</p>
+            <button class="buy-btn" onclick="redirectToUploadPage(150)">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mangify</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
