@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the 8-bit font to the body */
+body {
+    font-family: 'Press Start 2P', cursive; /* Using Press Start 2P font */
+    background-color: #0a0a0a; /* Black background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full height */
+    background-image: url('assets/images/background1.jpg'); /* Single background image */
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    background-attachment: scroll; /* Allow the image to scroll normally */
+    background-repeat: no-repeat;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Content Styles */
+main {
+    padding-bottom: 100px; /* Adds extra space at the bottom to ensure scrolling */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(28, 28, 28, 0.8); /* Slightly darker background */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Sky Blue glow */
+    margin-bottom: 30px;
+}
+
+/* Updated title font (Poppins) */
+header h1 {
+    color: #ffffff; /* White color for the title */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins font */
+    
+    /* Apply waving animation */
+    animation: wave 2s ease-in-out infinite; /* Animation name, duration, and infinite loop */
+}
+
+/* Keyframes for Waving Effect */
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateY(0); /* Start at neutral position */
+    }
+    25% {
+        transform: rotate(10deg) translateY(-10px); /* Small upward wave */
+    }
+    50% {
+        transform: rotate(0deg) translateY(0); /* Back to neutral */
+    }
+    75% {
+        transform: rotate(-10deg) translateY(10px); /* Small downward wave */
+    }
+    100% {
+        transform: rotate(0deg) translateY(0); /* Back to neutral */
+    }
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00bfff; /* Sky Blue color for links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff; /* Lighter Sky Blue on hover */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.art-item {
+    background-color: rgba(28, 28, 28, 0.8); /* Slightly darker background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5); /* Sky Blue glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make the art image fit well */
+.art-image {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.art-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.art-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.7); /* Sky Blue glow on hover */
+}
+
+/* Title of Art */
+.art-item h3 {
+    margin-top: 10px;
+    color: #00bfff; /* Sky Blue color for titles */
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 10px; /* Added margin to separate the title and price */
+}
+
+/* Price Text */
+.art-item p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 15px; /* Added margin at the bottom for spacing */
+}
+
+.buy-btn {
+    background-color: #00bfff; /* Sky Blue for buttons */
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #1e90ff; /* Lighter Sky Blue on hover */
+}
+
+/* Glowing Button Effect */
+.buy-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.7); /* Sky Blue glow on focus */
+}
+
+/* Info Section Styles */
+.info-section {
+    background-color: rgba(28, 28, 28, 0.8); /* Slightly darker background */
+    padding: 30px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Sky Blue glow */
+    color: #fff;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.info-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Payment Section Styles */
+.payment-section {
+    background-color: rgba(28, 28, 28, 0.8); /* Slightly darker background */
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Sky Blue glow */
+    margin-top: 50px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2d2d2d;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #00bfff; /* Sky Blue for footer text */
+}
